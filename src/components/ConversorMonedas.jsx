@@ -46,6 +46,9 @@ export default function ConversorMonedas() {
       <div className="titulo">
         <h2>Convierte tu moneda</h2>
       </div>
+      <div className='subtitulo'>
+        <h3>Tipos de cambio actualizados todos los dias</h3>
+      </div>
       <div className="card">
         <div className="conversor">
           <div className="fila-conversor">
@@ -54,10 +57,16 @@ export default function ConversorMonedas() {
               <div className='contenedor-inputs'>
                 <div className='input-unificado'>
                   <input
-                    type="number"
+                    type="text"
+                    inputMode="decimal"
                     value={amount}
-                    onChange={(e) => setAmount(e.target.value)}
-                    placeholder="Ej: 100"
+                    onChange={(e) => {
+                      const value = e.target.value.replace(/[^\d.]/g, '');
+                      if (value === '' || /^\d*\.?\d*$/.test(value)) {
+                        setAmount(value);
+                      }
+                    }}
+                    placeholder="0.00"
                   />
                 </div>
                 <div className='select-unificado'>
@@ -80,10 +89,10 @@ export default function ConversorMonedas() {
               <div className='contenedor-inputs'>
                 <div className='input-unificado'>
                   <input
-                    type="number"
+                    type="text"
                     value={resultado !== '' ? Number(resultado).toFixed(2) : ''}
                     readOnly
-                    placeholder="Resultado"
+                    placeholder="0.00"
                   />
                 </div>
                 <div className='select-unificado'>

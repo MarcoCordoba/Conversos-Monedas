@@ -7,13 +7,25 @@
     background: linear-gradient(90deg, #1e40af 40%, #0ea5e9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 2px 24px rgba(30,64,175,0.18);
+    text-shadow: 0 2px 24   px rgba(30,64,175,0.18);
     position: relative;
     margin-bottom: 1.5rem;
     padding: 0 1rem;
 }
 
-.titulo::after {
+.subtitulo{
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: #1e40af;
+    margin-top: 0.5rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    position: relative;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+.subtitulo::after {
     content: '';
     display: block;
     width: 80px;
@@ -60,13 +72,30 @@ label{
     padding: 0.3rem;
 }
 
+.input-unificado {
+    position: relative;
+    flex: 1;
+}
+
+.input-unificado::before {
+    content: '$';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+    z-index: 1;
+    font-size: 16px;
+}
+
 .input-unificado input {
     border: none;
-    padding: 10px;
-    flex: 1;
+    padding: 10px 10px 10px 25px;
+    width: 100%;
     outline: none;
     font-size: 16px;
-    border-radius: 8px 0 0 8px; /* solo izquierda */
+    border-radius: 8px 0 0 8px;
+    box-sizing: border-box;
 }
 
 .select-unificado select {
