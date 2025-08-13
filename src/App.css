@@ -3,7 +3,11 @@
 html, body {
     margin: 0;
     height: 100%;
-    background: #1a1a1a;
+    background: #080b14;
+    background-image: 
+        radial-gradient(at 40% 20%, rgba(37, 99, 235, 0.08) 0px, transparent 40%),
+        radial-gradient(at 80% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 40%),
+        radial-gradient(at 0% 50%, rgba(37, 99, 235, 0.08) 0px, transparent 40%);
     position: relative;
     overflow: hidden;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
