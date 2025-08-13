@@ -1,5 +1,5 @@
 const API_KEY = 'c93f24544e92fd5a5a954223';
-const BASE_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}`; // Corrige aquí
+const BASE_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}`;
 
 export const getMonedas = async () => {
   const response = await fetch(`${BASE_URL}/latest/USD`);
