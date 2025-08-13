@@ -1,0 +1,31 @@
+.swap-button {
+    background-color: rgb(252, 252, 252);
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0.5rem;
+    position: relative;
+    top: 34px;
+    margin-inline: 1.5rem;
+}
+
+.swap-button svg {
+    width: 24px;
+    height: 24px;
+    color: #000000;
+}
+
+
+@media (max-width: 600px) {
+    .swap-button {
+        transform: rotate(90deg);
+        margin: 1rem 0;
+        top: 0;
+    }
+}
+
